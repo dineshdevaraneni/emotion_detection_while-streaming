@@ -1,0 +1,21 @@
+{% extends 'homeapp/Mainhome.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/anything.css' %}"">
+
+
+  <div style="padding: 50px; width: 600px; margin: auto;">
+    <h1 style="text-align: center">Results</h1>
+    <div data-stepped-bar='{"title": "Emotions", "catagories": [ { "name": "Happy", "value": {{ans.happy}}, "color": "#ff6384" }, { "name": "sad", "value":{{ans.sad}}, "color": "#1C9FFF" },{ "name": "Angry", "value": {{ans.angry}}, "color": "#FF0000" },{ "name": "neutral", "value": {{ans.neutral}}, "color": "#bbbbbb" },{ "name": "Fear", "value": {{ans.fear}}, "color": "#8F0FFF" },{ "name": "Surprise", "value": {{ans.surprise}}, "color": "#13EE2D" },{ "name": "Disgust", "value": {{ans.disgust}}, "color": "#289445" } ]}'>
+    </div>
+  </div>
+
+  <script src="{% static 'js/anything.js' %}"></script>
+
+
+
+
+  {% endblock %}
+
+{ "name": "Happy", "value": {{ans.happy}}, "color": "#ff6384" }, { "name": "sad", "value":{{ans.sad}}, "color": "#ffcd56" },{ "name": "Angry", "value": {{ans.angry}}, "color": "#aaaaaa" },{ "name": "neutral", "value": {{ans.neutral}}, "color": "#bbbbbb" },{ "name": "Fear", "value": {{ans.fear}}, "color": "#cccccc" },{ "name": "Surprise", "value": {{ans.surprse}}, "color": "#dddddd" }

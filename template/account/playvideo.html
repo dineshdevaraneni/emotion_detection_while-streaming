@@ -1,0 +1,67 @@
+{% extends 'homeapp/Mainhome.html' %}
+{% load static %}
+
+{% block content %}
+
+
+        
+        <br>
+        
+        <button style="background-color: #00adb5">
+            <a class ="detectbutton"  href="{% url 'do_something'  %}" type="button" style="color: #eeeeee;" >
+            want to know you emotions click here </a>
+            <br>
+        </button>
+
+        <br>
+        <br>
+        
+
+        <video class ="video-fluid" width="60%" height="60%"  controls="controls" id="cam_video"   >
+            
+            <source src="{{videoplay.file.url}}" type="video/mp4" style="align-self: auto;" />
+    </video>
+
+
+    <script type="text/javascript">
+        var video = document.getElementById("cam_video");
+        video.addEventListener("ended",async function() {
+            // await $.ajax({
+            //     type:"GET",
+            //     url : 'close_cam1',
+            //     success: function(response){
+            //         alert(respone)
+            //     }
+            // })
+            
+            window.open("http://127.0.0.1:8000/video/details/playvideo/close1", "_self");        
+            //  alert('Ended');
+           },false);
+        
+
+        $('.detectbutton').click(function(){
+        $.ajax({
+
+                type:"GET",
+                url : 'do_something',
+                
+                success: function(response){
+                    alert(respone)
+                    
+                }
+            })
+        });
+        
+        
+    </script>
+    
+
+    
+    
+
+
+    
+    
+
+
+{% endblock %}
