@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-c@uprvhebk)&rwyqjs4$$1jaq+5syxe&^yn-@@+e2mn3so982d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','emotionswebsite.herokuapp.com' ]
+ALLOWED_HOSTS = ['*' ]
 
 
 # Application definition
